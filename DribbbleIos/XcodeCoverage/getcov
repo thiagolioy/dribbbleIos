@@ -37,7 +37,7 @@ exclude_data()
 
 generate_report()
 {
-    "${LCOV_PATH}/genhtml" --output-directory . ${LCOV_INFO}
+    genhtml --output-directory . ${LCOV_INFO}
     open index.html
 }
 
