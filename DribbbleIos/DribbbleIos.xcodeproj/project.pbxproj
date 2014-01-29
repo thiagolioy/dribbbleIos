@@ -168,6 +168,7 @@
 				20AC98FF189980B300B7A9D5 /* Frameworks */,
 				20AC9900189980B300B7A9D5 /* Resources */,
 				09026CCBC9BC4152AF652BD5 /* Copy Pods Resources */,
+				20AC9934189986F800B7A9D5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -265,6 +266,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-DribbbleIos-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		20AC9934189986F800B7A9D5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = XcodeCoverage/exportenv.sh;
 		};
 		300B320DC36D43BF9626B28C /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
