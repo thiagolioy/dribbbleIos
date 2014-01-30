@@ -132,12 +132,11 @@
 				20AC9914189980B400B7A9D5 /* AppDelegate.h */,
 				20AC9915189980B400B7A9D5 /* AppDelegate.m */,
 				20AC9917189980B400B7A9D5 /* Images.xcassets */,
+				20D1B0F2189AC61100AF79FE /* controllers */,
+				20D1B0F1189AC5F800AF79FE /* storyboards */,
+				20D1B0F0189AC59300AF79FE /* services */,
+				20D1B0EF189AC58400AF79FE /* models */,
 				20AC990C189980B400B7A9D5 /* Supporting Files */,
-				20206022189AB26E000B26CA /* ShotsListViewController.h */,
-				20206023189AB26E000B26CA /* ShotsListViewController.m */,
-				20206027189AB572000B26CA /* mainStoryboard.storyboard */,
-				20D1B0EC189ABDCD00AF79FE /* ShotsService.h */,
-				20D1B0ED189ABDCD00AF79FE /* ShotsService.m */,
 			);
 			path = DribbbleIos;
 			sourceTree = "<group>";
@@ -169,6 +168,39 @@
 				20AC9927189980B400B7A9D5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20D1B0EF189AC58400AF79FE /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		20D1B0F0189AC59300AF79FE /* services */ = {
+			isa = PBXGroup;
+			children = (
+				20D1B0EC189ABDCD00AF79FE /* ShotsService.h */,
+				20D1B0ED189ABDCD00AF79FE /* ShotsService.m */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
+		20D1B0F1189AC5F800AF79FE /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				20206027189AB572000B26CA /* mainStoryboard.storyboard */,
+			);
+			name = storyboards;
+			sourceTree = "<group>";
+		};
+		20D1B0F2189AC61100AF79FE /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				20206022189AB26E000B26CA /* ShotsListViewController.h */,
+				20206023189AB26E000B26CA /* ShotsListViewController.m */,
+			);
+			name = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -55,6 +55,13 @@ describe(@"ShotsListViewController", ^{
             //assert
             [mockShotsService verify];
         });
+        
+        describe(@"shotsTableView", ^{
+            it(@"should have 2 rows after load mock data",^{
+            
+            });
+        });
+        
     });
     
 });
