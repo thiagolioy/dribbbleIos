@@ -21,6 +21,7 @@
 		20AC9920189980B400B7A9D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AC9905189980B300B7A9D5 /* Foundation.framework */; };
 		20AC9921189980B400B7A9D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AC9909189980B400B7A9D5 /* UIKit.framework */; };
 		20AC9929189980B400B7A9D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20AC9927189980B400B7A9D5 /* InfoPlist.strings */; };
+		20D1B0EE189ABDCD00AF79FE /* ShotsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D1B0ED189ABDCD00AF79FE /* ShotsService.m */; };
 		42C367F18D1A4571B80E2A8E /* libPods-DribbbleIos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4838F633396844ECB9EE0753 /* libPods-DribbbleIos.a */; };
 		4E331449EB664B8980C1BDD7 /* libPods-DribbbleIosTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA030359ECE419FAFBA322E /* libPods-DribbbleIosTests.a */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,8 @@
 		20AC991E189980B400B7A9D5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		20AC9926189980B400B7A9D5 /* DribbbleIosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DribbbleIosTests-Info.plist"; sourceTree = "<group>"; };
 		20AC9928189980B400B7A9D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		20D1B0EC189ABDCD00AF79FE /* ShotsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotsService.h; sourceTree = "<group>"; };
+		20D1B0ED189ABDCD00AF79FE /* ShotsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotsService.m; sourceTree = "<group>"; };
 		4838F633396844ECB9EE0753 /* libPods-DribbbleIos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DribbbleIos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CA030359ECE419FAFBA322E /* libPods-DribbbleIosTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DribbbleIosTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		631EF7BB75FA4BE0BEA7AFE7 /* Pods-DribbbleIosTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleIosTests.xcconfig"; path = "Pods/Pods-DribbbleIosTests.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				20206022189AB26E000B26CA /* ShotsListViewController.h */,
 				20206023189AB26E000B26CA /* ShotsListViewController.m */,
 				20206027189AB572000B26CA /* mainStoryboard.storyboard */,
+				20D1B0EC189ABDCD00AF79FE /* ShotsService.h */,
+				20D1B0ED189ABDCD00AF79FE /* ShotsService.m */,
 			);
 			path = DribbbleIos;
 			sourceTree = "<group>";
@@ -346,6 +351,7 @@
 				20206024189AB26E000B26CA /* ShotsListViewController.m in Sources */,
 				20AC9916189980B400B7A9D5 /* AppDelegate.m in Sources */,
 				20AC9912189980B400B7A9D5 /* main.m in Sources */,
+				20D1B0EE189ABDCD00AF79FE /* ShotsService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

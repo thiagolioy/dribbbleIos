@@ -14,11 +14,11 @@
 
 @implementation ShotsListViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    self = [super initWithCoder:aDecoder];
+    if(self){
+        _shotsService = [ShotsService new];
     }
     return self;
 }
@@ -27,6 +27,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+//    ShotsService *service = [ShotsService new];
+    [_shotsService fetchShotsList:@"popular" completion:^(NSArray *shots) {
+       
+    }];
 }
 
 - (void)didReceiveMemoryWarning

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ShotsService.h"
 
 @interface ShotsListViewController : UIViewController
+
+@property(nonatomic,strong) IBOutlet UITableView *shotsTableView;
+@property(nonatomic,strong) IBOutlet ShotsService *shotsService;
 
 @end
