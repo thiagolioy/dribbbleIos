@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20206024189AB26E000B26CA /* ShotsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20206023189AB26E000B26CA /* ShotsListViewController.m */; };
+		20206026189AB482000B26CA /* ShotsListViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 20206025189AB482000B26CA /* ShotsListViewControllerSpec.m */; };
+		20206028189AB572000B26CA /* mainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20206027189AB572000B26CA /* mainStoryboard.storyboard */; };
 		20AC9906189980B400B7A9D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AC9905189980B300B7A9D5 /* Foundation.framework */; };
 		20AC9908189980B400B7A9D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AC9907189980B400B7A9D5 /* CoreGraphics.framework */; };
 		20AC990A189980B400B7A9D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AC9909189980B400B7A9D5 /* UIKit.framework */; };
@@ -18,8 +21,6 @@
 		20AC9920189980B400B7A9D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AC9905189980B300B7A9D5 /* Foundation.framework */; };
 		20AC9921189980B400B7A9D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AC9909189980B400B7A9D5 /* UIKit.framework */; };
 		20AC9929189980B400B7A9D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20AC9927189980B400B7A9D5 /* InfoPlist.strings */; };
-		20AC992B189980B400B7A9D5 /* DribbbleIosSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AC992A189980B400B7A9D5 /* DribbbleIosSpec.m */; };
-		20AC99371899882900B7A9D5 /* Dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AC99361899882900B7A9D5 /* Dummy.m */; };
 		42C367F18D1A4571B80E2A8E /* libPods-DribbbleIos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4838F633396844ECB9EE0753 /* libPods-DribbbleIos.a */; };
 		4E331449EB664B8980C1BDD7 /* libPods-DribbbleIosTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA030359ECE419FAFBA322E /* libPods-DribbbleIosTests.a */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,10 @@
 
 /* Begin PBXFileReference section */
 		1B028E8736174C2D82B642AD /* Pods-DribbbleIos.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleIos.xcconfig"; path = "Pods/Pods-DribbbleIos.xcconfig"; sourceTree = "<group>"; };
+		20206022189AB26E000B26CA /* ShotsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotsListViewController.h; sourceTree = "<group>"; };
+		20206023189AB26E000B26CA /* ShotsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotsListViewController.m; sourceTree = "<group>"; };
+		20206025189AB482000B26CA /* ShotsListViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotsListViewControllerSpec.m; sourceTree = "<group>"; };
+		20206027189AB572000B26CA /* mainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mainStoryboard.storyboard; sourceTree = "<group>"; };
 		20AB39E4189A6EC600E1297C /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		20AC9902189980B300B7A9D5 /* DribbbleIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DribbbleIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20AC9905189980B300B7A9D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,9 +57,6 @@
 		20AC991E189980B400B7A9D5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		20AC9926189980B400B7A9D5 /* DribbbleIosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DribbbleIosTests-Info.plist"; sourceTree = "<group>"; };
 		20AC9928189980B400B7A9D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		20AC992A189980B400B7A9D5 /* DribbbleIosSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DribbbleIosSpec.m; sourceTree = "<group>"; };
-		20AC99351899882900B7A9D5 /* Dummy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dummy.h; sourceTree = "<group>"; };
-		20AC99361899882900B7A9D5 /* Dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dummy.m; sourceTree = "<group>"; };
 		4838F633396844ECB9EE0753 /* libPods-DribbbleIos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DribbbleIos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CA030359ECE419FAFBA322E /* libPods-DribbbleIosTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DribbbleIosTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		631EF7BB75FA4BE0BEA7AFE7 /* Pods-DribbbleIosTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleIosTests.xcconfig"; path = "Pods/Pods-DribbbleIosTests.xcconfig"; sourceTree = "<group>"; };
@@ -128,8 +130,9 @@
 				20AC9915189980B400B7A9D5 /* AppDelegate.m */,
 				20AC9917189980B400B7A9D5 /* Images.xcassets */,
 				20AC990C189980B400B7A9D5 /* Supporting Files */,
-				20AC99351899882900B7A9D5 /* Dummy.h */,
-				20AC99361899882900B7A9D5 /* Dummy.m */,
+				20206022189AB26E000B26CA /* ShotsListViewController.h */,
+				20206023189AB26E000B26CA /* ShotsListViewController.m */,
+				20206027189AB572000B26CA /* mainStoryboard.storyboard */,
 			);
 			path = DribbbleIos;
 			sourceTree = "<group>";
@@ -148,7 +151,7 @@
 		20AC9924189980B400B7A9D5 /* DribbbleIosTests */ = {
 			isa = PBXGroup;
 			children = (
-				20AC992A189980B400B7A9D5 /* DribbbleIosSpec.m */,
+				20206025189AB482000B26CA /* ShotsListViewControllerSpec.m */,
 				20AC9925189980B400B7A9D5 /* Supporting Files */,
 			);
 			path = DribbbleIosTests;
@@ -245,6 +248,7 @@
 			files = (
 				20AC9910189980B400B7A9D5 /* InfoPlist.strings in Resources */,
 				20AC9918189980B400B7A9D5 /* Images.xcassets in Resources */,
+				20206028189AB572000B26CA /* mainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20AC99371899882900B7A9D5 /* Dummy.m in Sources */,
+				20206024189AB26E000B26CA /* ShotsListViewController.m in Sources */,
 				20AC9916189980B400B7A9D5 /* AppDelegate.m in Sources */,
 				20AC9912189980B400B7A9D5 /* main.m in Sources */,
 			);
@@ -349,7 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20AC992B189980B400B7A9D5 /* DribbbleIosSpec.m in Sources */,
+				20206026189AB482000B26CA /* ShotsListViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

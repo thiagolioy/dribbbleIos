@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="5pb-Mi-idz">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="lAG-Hr-C8w">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="5pb-Mi-idz" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jx1-yH-FHO">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="f2r-25-bjw" kind="relationship" relationship="rootViewController" id="v1E-EH-U80"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PF9-dd-OzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="522" y="-345"/>
+        </scene>
+        <!--Shots List View Controller - ShotsList-->
+        <scene sceneID="MpF-nd-Y5k">
+            <objects>
+                <viewController storyboardIdentifier="ShotsListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f2r-25-bjw" customClass="ShotsListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PvG-Bk-BIY"/>
+                        <viewControllerLayoutGuide type="bottom" id="pvT-e5-1tK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dJV-7r-T2A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ShotsList" id="bhm-vr-zgJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nHJ-h8-Y8R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994" y="-334"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
