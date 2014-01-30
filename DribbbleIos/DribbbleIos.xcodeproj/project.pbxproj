@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		20AB39E7189A70ED00E1297C /* GcovTestObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AB39E6189A70ED00E1297C /* GcovTestObserver.m */; };
 		20AC9906189980B400B7A9D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AC9905189980B300B7A9D5 /* Foundation.framework */; };
 		20AC9908189980B400B7A9D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AC9907189980B400B7A9D5 /* CoreGraphics.framework */; };
 		20AC990A189980B400B7A9D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AC9909189980B400B7A9D5 /* UIKit.framework */; };
@@ -38,8 +37,6 @@
 /* Begin PBXFileReference section */
 		1B028E8736174C2D82B642AD /* Pods-DribbbleIos.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DribbbleIos.xcconfig"; path = "Pods/Pods-DribbbleIos.xcconfig"; sourceTree = "<group>"; };
 		20AB39E4189A6EC600E1297C /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		20AB39E5189A70ED00E1297C /* GcovTestObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GcovTestObserver.h; sourceTree = "<group>"; };
-		20AB39E6189A70ED00E1297C /* GcovTestObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GcovTestObserver.m; sourceTree = "<group>"; };
 		20AC9902189980B300B7A9D5 /* DribbbleIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DribbbleIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20AC9905189980B300B7A9D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		20AC9907189980B400B7A9D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -153,8 +150,6 @@
 			children = (
 				20AC992A189980B400B7A9D5 /* DribbbleIosSpec.m */,
 				20AC9925189980B400B7A9D5 /* Supporting Files */,
-				20AB39E5189A70ED00E1297C /* GcovTestObserver.h */,
-				20AB39E6189A70ED00E1297C /* GcovTestObserver.m */,
 			);
 			path = DribbbleIosTests;
 			sourceTree = "<group>";
@@ -354,7 +349,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20AB39E7189A70ED00E1297C /* GcovTestObserver.m in Sources */,
 				20AC992B189980B400B7A9D5 /* DribbbleIosSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
