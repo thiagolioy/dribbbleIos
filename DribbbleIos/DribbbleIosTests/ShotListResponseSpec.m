@@ -11,6 +11,7 @@
 #define EXP_SHORTHAND
 #import "Expecta.h"
 #import "ShotsListResponse.h"
+#import "Factory.h"
 
 SpecBegin(ShotListResponseSpec)
 
@@ -19,12 +20,7 @@ describe(@"ShotListResponse", ^{
     describe(@".shotsListResponseWithDict", ^{
         __block ShotsListResponse *response;
         beforeEach(^{
-            NSDictionary *jsonDict = @{@"page":@"1",
-                                       @"per_page":@"15",
-                                       @"pages":@"50",
-                                       @"total":@"750",
-                                       @"shots":[NSArray array]};
-            response = [ShotsListResponse shotsListResponseWithDict:jsonDict];
+            response = [ShotsListResponse shotsListResponseWithDict:[Factory shotListResponseDict]];
         });
         
         it(@"should be instantiated from a json dictionary",^{

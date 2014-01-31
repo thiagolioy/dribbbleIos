@@ -11,6 +11,8 @@
 #import "OCMock.h"
 #import "ShotsListViewController.h"
 #import "ShotsService.h"
+#import "Shot.h"
+#import "Factory.h"
 
 SpecBegin(ShotsListViewControllerSpec)
 
@@ -36,6 +38,14 @@ describe(@"ShotsListViewController", ^{
         expect(shotsVC.shotsTableView).toNot.beNil();
     });
     
+    it(@"should have a datasource wired on the shots tableview", ^{
+        expect(shotsVC.shotsTableView.dataSource).toNot.beNil();
+    });
+    
+    it(@"should have a delegate wired on the shots tableview", ^{
+        expect(shotsVC.shotsTableView.delegate).toNot.beNil();
+    });
+    
     describe(@"load shots data", ^{
         it(@"should have a default shots service",^{
             expect(shotsVC.shotsService).notTo.beNil();
@@ -58,7 +68,7 @@ describe(@"ShotsListViewController", ^{
         
         describe(@"shotsTableView", ^{
             it(@"should have 2 rows after load mock data",^{
-            
+              
             });
         });
         

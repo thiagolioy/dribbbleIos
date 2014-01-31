@@ -10,6 +10,7 @@
 #define EXP_SHORTHAND
 #import "Expecta.h"
 #import "Shot.h"
+#import "Factory.h"
 
 SpecBegin(ShotSpec)
 
@@ -18,12 +19,7 @@ describe(@"Shot", ^{
     describe(@".shotWithDict", ^{
         __block Shot *shot;
         beforeEach(^{
-            NSDictionary *jsonDict = @{@"id":@"1401076",
-                                       @"title":@"Coming Soon",
-                                       @"image_url":@"http://d13yacurqjgara.cloudfront.net/users/7249/screenshots/1401076/cattle_cs.jpg",
-                                       @"image_teaser_url":@"http://d13yacurqjgara.cloudfront.net/users/7249/screenshots/1401076/cattle_cs_teaser.jpg",
-                                       @"image_400_url":@"http://d13yacurqjgara.cloudfront.net/users/7249/screenshots/1401076/cattle_cs_1x.jpg"};
-            shot = [Shot shotWithDict:jsonDict];
+            shot = [Shot shotWithDict:[Factory shotDict]];
         });
         
         it(@"should be instantiated from a json dictionary",^{
@@ -61,18 +57,7 @@ describe(@"Shot", ^{
         __block NSArray *shots;
         
         beforeEach(^{
-            NSDictionary *firstJsonDict = @{@"id":@"1401076",
-                                            @"title":@"Coming Soon",
-                                            @"image_url":@"http://d13yacurqjgara.cloudfront.net/users/7249/screenshots/1401076/cattle_cs.jpg",
-                                            @"image_teaser_url":@"http://d13yacurqjgara.cloudfront.net/users/7249/screenshots/1401076/cattle_cs_teaser.jpg",
-                                            @"image_400_url":@"http://d13yacurqjgara.cloudfront.net/users/7249/screenshots/1401076/cattle_cs_1x.jpg"};
-            NSDictionary *secondJsonDict = @{@"id":@"1401076",
-                                             @"title":@"Coming Soon",
-                                             @"image_url":@"http://d13yacurqjgara.cloudfront.net/users/7249/screenshots/1401076/cattle_cs.jpg",
-                                             @"image_teaser_url":@"http://d13yacurqjgara.cloudfront.net/users/7249/screenshots/1401076/cattle_cs_teaser.jpg",
-                                             @"image_400_url":@"http://d13yacurqjgara.cloudfront.net/users/7249/screenshots/1401076/cattle_cs_1x.jpg"};
-            
-            NSArray *array = [NSArray arrayWithObjects:firstJsonDict,secondJsonDict, nil];
+            NSArray *array = [NSArray arrayWithObjects:[Factory shotDict],[Factory shotDict], nil];
             shots = [Shot shotsWithDictArray:array];
         });
         
