@@ -104,6 +104,7 @@
 		208865FF189B26F200093453 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				20206025189AB482000B26CA /* ShotsListViewControllerSpec.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -183,7 +184,6 @@
 			children = (
 				20886600189B26FA00093453 /* models */,
 				208865FF189B26F200093453 /* controllers */,
-				20206025189AB482000B26CA /* ShotsListViewControllerSpec.m */,
 				20AC9925189980B400B7A9D5 /* Supporting Files */,
 			);
 			path = DribbbleIosTests;
