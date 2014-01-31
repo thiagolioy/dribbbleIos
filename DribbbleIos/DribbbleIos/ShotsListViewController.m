@@ -28,7 +28,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-//    ShotsService *service = [ShotsService new];
     [_shotsService fetchShotsList:@"popular" completion:^(NSArray *shots) {
        
     }];

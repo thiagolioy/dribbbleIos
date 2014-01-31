@@ -10,6 +10,10 @@
 		20206024189AB26E000B26CA /* ShotsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20206023189AB26E000B26CA /* ShotsListViewController.m */; };
 		20206026189AB482000B26CA /* ShotsListViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 20206025189AB482000B26CA /* ShotsListViewControllerSpec.m */; };
 		20206028189AB572000B26CA /* mainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20206027189AB572000B26CA /* mainStoryboard.storyboard */; };
+		208865FB189B239D00093453 /* ShotsListResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 208865FA189B239D00093453 /* ShotsListResponse.m */; };
+		208865FE189B23AA00093453 /* Shot.m in Sources */ = {isa = PBXBuildFile; fileRef = 208865FD189B23AA00093453 /* Shot.m */; };
+		20886602189B271A00093453 /* ShotSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886601189B271A00093453 /* ShotSpec.m */; };
+		20886604189B2BB500093453 /* ShotListResponseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886603189B2BB500093453 /* ShotListResponseSpec.m */; };
 		20AC9906189980B400B7A9D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AC9905189980B300B7A9D5 /* Foundation.framework */; };
 		20AC9908189980B400B7A9D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AC9907189980B400B7A9D5 /* CoreGraphics.framework */; };
 		20AC990A189980B400B7A9D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AC9909189980B400B7A9D5 /* UIKit.framework */; };
@@ -42,6 +46,12 @@
 		20206023189AB26E000B26CA /* ShotsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotsListViewController.m; sourceTree = "<group>"; };
 		20206025189AB482000B26CA /* ShotsListViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotsListViewControllerSpec.m; sourceTree = "<group>"; };
 		20206027189AB572000B26CA /* mainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mainStoryboard.storyboard; sourceTree = "<group>"; };
+		208865F9189B239D00093453 /* ShotsListResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotsListResponse.h; sourceTree = "<group>"; };
+		208865FA189B239D00093453 /* ShotsListResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotsListResponse.m; sourceTree = "<group>"; };
+		208865FC189B23AA00093453 /* Shot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shot.h; sourceTree = "<group>"; };
+		208865FD189B23AA00093453 /* Shot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shot.m; sourceTree = "<group>"; };
+		20886601189B271A00093453 /* ShotSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotSpec.m; sourceTree = "<group>"; };
+		20886603189B2BB500093453 /* ShotListResponseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotListResponseSpec.m; sourceTree = "<group>"; };
 		20AB39E4189A6EC600E1297C /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		20AC9902189980B300B7A9D5 /* DribbbleIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DribbbleIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20AC9905189980B300B7A9D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -91,6 +101,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		208865FF189B26F200093453 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		20886600189B26FA00093453 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				20886601189B271A00093453 /* ShotSpec.m */,
+				20886603189B2BB500093453 /* ShotListResponseSpec.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
 		20AC98F9189980B300B7A9D5 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +181,8 @@
 		20AC9924189980B400B7A9D5 /* DribbbleIosTests */ = {
 			isa = PBXGroup;
 			children = (
+				20886600189B26FA00093453 /* models */,
+				208865FF189B26F200093453 /* controllers */,
 				20206025189AB482000B26CA /* ShotsListViewControllerSpec.m */,
 				20AC9925189980B400B7A9D5 /* Supporting Files */,
 			);
@@ -173,6 +201,10 @@
 		20D1B0EF189AC58400AF79FE /* models */ = {
 			isa = PBXGroup;
 			children = (
+				208865F9189B239D00093453 /* ShotsListResponse.h */,
+				208865FA189B239D00093453 /* ShotsListResponse.m */,
+				208865FC189B23AA00093453 /* Shot.h */,
+				208865FD189B23AA00093453 /* Shot.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -381,8 +413,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				20206024189AB26E000B26CA /* ShotsListViewController.m in Sources */,
+				208865FE189B23AA00093453 /* Shot.m in Sources */,
 				20AC9916189980B400B7A9D5 /* AppDelegate.m in Sources */,
 				20AC9912189980B400B7A9D5 /* main.m in Sources */,
+				208865FB189B239D00093453 /* ShotsListResponse.m in Sources */,
 				20D1B0EE189ABDCD00AF79FE /* ShotsService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +425,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20886604189B2BB500093453 /* ShotListResponseSpec.m in Sources */,
+				20886602189B271A00093453 /* ShotSpec.m in Sources */,
 				20206026189AB482000B26CA /* ShotsListViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
