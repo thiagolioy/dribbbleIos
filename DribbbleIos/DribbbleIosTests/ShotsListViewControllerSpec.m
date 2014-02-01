@@ -68,7 +68,22 @@ describe(@"ShotsListViewController", ^{
         
         describe(@"shotsTableView", ^{
             it(@"should have 2 rows after load mock data",^{
-              
+               id mockShotsService = [OCMockObject mockForClass:[ShotsService class]];
+                //Setter Injection
+                shotsVC.shotsService = mockShotsService;
+                
+                [[mockShotsService stub] fetchShotsList:[OCMArg any] completion:[OCMArg checkWithBlock:^BOOL(FetchShotsListCompletionBlock block) {
+                    NSArray *shots = [Shot shotsWithDictArray:[NSArray arrayWithObjects:[Factory shotDict],[Factory shotDict], nil]];
+                    block(shots);
+                    return YES;
+                }]];
+                
+                //Act
+                [shotsVC viewDidLoad];
+                
+                [mockShotsService verify];
+                id <UITableViewDataSource> dataSource = shotsVC.shotsTableView.dataSource;
+                expect([dataSource tableView:shotsVC.shotsTableView numberOfRowsInSection:0] == 2).to.beTruthy();
             });
         });
         

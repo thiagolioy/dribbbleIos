@@ -9,7 +9,7 @@
 #import "ShotsListViewController.h"
 
 @interface ShotsListViewController ()
-
+@property(nonatomic,strong) NSMutableArray *shotsArray;
 @end
 
 @implementation ShotsListViewController
@@ -29,7 +29,10 @@
 	// Do any additional setup after loading the view.
     
     [_shotsService fetchShotsList:@"popular" completion:^(NSArray *shots) {
-       
+        if(!_shotsArray)
+            _shotsArray = [NSMutableArray arrayWithCapacity:shots.count];
+        [_shotsArray addObjectsFromArray:shots];
+        [_shotsTableView reloadData];
     }];
 }
 
@@ -41,7 +44,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 0;
+    return _shotsArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     return nil;
