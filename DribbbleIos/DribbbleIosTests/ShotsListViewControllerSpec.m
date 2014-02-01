@@ -45,47 +45,40 @@ describe(@"ShotsListViewController", ^{
     it(@"should have a delegate wired on the shots tableview", ^{
         expect(shotsVC.shotsTableView.delegate).toNot.beNil();
     });
+    it(@"should have a default shots service",^{
+        expect(shotsVC.shotsService).notTo.beNil();
+    });
     
     describe(@"load shots data", ^{
-        it(@"should have a default shots service",^{
-            expect(shotsVC.shotsService).notTo.beNil();
+        __block id _mockShotsService;
+        
+        beforeEach(^{
+            _mockShotsService = [OCMockObject mockForClass:[ShotsService class]];
+            shotsVC.shotsService = _mockShotsService;
         });
         
-        it(@"should load data with the shots service", ^{
-            //Arrange
-            id mockShotsService = [OCMockObject mockForClass:[ShotsService class]];
-            [[mockShotsService expect] fetchShotsList:[OCMArg any] completion:[OCMArg any]];
+        afterEach(^{
+            [_mockShotsService verify];
+        });
+        
+        it(@"should load data on view did load using shots service", ^{
+            [[_mockShotsService expect] fetchShotsList:[OCMArg any] completion:[OCMArg any]];
+            [shotsVC viewDidLoad];
+        });
+        
+        it(@"should have 2 rows after load mock data",^{
+            [[_mockShotsService stub] fetchShotsList:[OCMArg any] completion:[OCMArg checkWithBlock:^BOOL(FetchShotsListCompletionBlock block) {
+                NSArray *shots = [Shot shotsWithDictArray:[NSArray arrayWithObjects:[Factory shotDict],[Factory shotDict], nil]];
+                block(shots);
+                return YES;
+            }]];
             
-            //Setter Injection
-            shotsVC.shotsService = mockShotsService;
-            
-            //Act
             [shotsVC viewDidLoad];
             
-            //assert
-            [mockShotsService verify];
+            id <UITableViewDataSource> dataSource = shotsVC.shotsTableView.dataSource;
+            expect([dataSource tableView:shotsVC.shotsTableView numberOfRowsInSection:0] == 2).to.beTruthy();
         });
         
-        describe(@"shotsTableView", ^{
-            it(@"should have 2 rows after load mock data",^{
-               id mockShotsService = [OCMockObject mockForClass:[ShotsService class]];
-                //Setter Injection
-                shotsVC.shotsService = mockShotsService;
-                
-                [[mockShotsService stub] fetchShotsList:[OCMArg any] completion:[OCMArg checkWithBlock:^BOOL(FetchShotsListCompletionBlock block) {
-                    NSArray *shots = [Shot shotsWithDictArray:[NSArray arrayWithObjects:[Factory shotDict],[Factory shotDict], nil]];
-                    block(shots);
-                    return YES;
-                }]];
-                
-                //Act
-                [shotsVC viewDidLoad];
-                
-                [mockShotsService verify];
-                id <UITableViewDataSource> dataSource = shotsVC.shotsTableView.dataSource;
-                expect([dataSource tableView:shotsVC.shotsTableView numberOfRowsInSection:0] == 2).to.beTruthy();
-            });
-        });
         
     });
     

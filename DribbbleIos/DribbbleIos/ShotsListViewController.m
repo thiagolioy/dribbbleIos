@@ -10,6 +10,7 @@
 
 @interface ShotsListViewController ()
 @property(nonatomic,strong) NSMutableArray *shotsArray;
+-(void)fetchShots;
 @end
 
 @implementation ShotsListViewController
@@ -27,7 +28,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+    [self fetchShots];
+}
+
+-(void)fetchShots{
     [_shotsService fetchShotsList:@"popular" completion:^(NSArray *shots) {
         if(!_shotsArray)
             _shotsArray = [NSMutableArray arrayWithCapacity:shots.count];
