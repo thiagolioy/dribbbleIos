@@ -7,6 +7,10 @@
 //
 
 #import "ShotsListViewController.h"
+#import "ShotCell.h"
+#import "Shot.h"
+
+static NSString *ShotCellID = @"ShotCellID";
 
 @interface ShotsListViewController ()
 @property(nonatomic,strong) NSMutableArray *shotsArray;
@@ -50,8 +54,12 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return _shotsArray.count;
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return nil;
+    ShotCell *cell = (ShotCell*)[_shotsTableView dequeueReusableCellWithIdentifier:ShotCellID forIndexPath:indexPath];
+    Shot *shot = [_shotsArray objectAtIndex:indexPath.row];
+    [cell fillShotCell:shot];
+    return cell;
 }
 
 @end

@@ -14,6 +14,8 @@
 		208865FE189B23AA00093453 /* Shot.m in Sources */ = {isa = PBXBuildFile; fileRef = 208865FD189B23AA00093453 /* Shot.m */; };
 		20886602189B271A00093453 /* ShotSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886601189B271A00093453 /* ShotSpec.m */; };
 		20886604189B2BB500093453 /* ShotListResponseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 20886603189B2BB500093453 /* ShotListResponseSpec.m */; };
+		20A4EF13189D9FB7000A2974 /* ShotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A4EF12189D9FB7000A2974 /* ShotCell.m */; };
+		20A4EF16189DA055000A2974 /* ShotCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A4EF15189DA055000A2974 /* ShotCellSpec.m */; };
 		20AC9906189980B400B7A9D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AC9905189980B300B7A9D5 /* Foundation.framework */; };
 		20AC9908189980B400B7A9D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AC9907189980B400B7A9D5 /* CoreGraphics.framework */; };
 		20AC990A189980B400B7A9D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20AC9909189980B400B7A9D5 /* UIKit.framework */; };
@@ -53,6 +55,9 @@
 		208865FD189B23AA00093453 /* Shot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shot.m; sourceTree = "<group>"; };
 		20886601189B271A00093453 /* ShotSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotSpec.m; sourceTree = "<group>"; };
 		20886603189B2BB500093453 /* ShotListResponseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotListResponseSpec.m; sourceTree = "<group>"; };
+		20A4EF11189D9FB7000A2974 /* ShotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShotCell.h; sourceTree = "<group>"; };
+		20A4EF12189D9FB7000A2974 /* ShotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotCell.m; sourceTree = "<group>"; };
+		20A4EF15189DA055000A2974 /* ShotCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShotCellSpec.m; sourceTree = "<group>"; };
 		20AB39E4189A6EC600E1297C /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		20AC9902189980B300B7A9D5 /* DribbbleIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DribbbleIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20AC9905189980B300B7A9D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,6 +126,23 @@
 			name = models;
 			sourceTree = "<group>";
 		};
+		20A4EF10189D9F9B000A2974 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				20A4EF11189D9FB7000A2974 /* ShotCell.h */,
+				20A4EF12189D9FB7000A2974 /* ShotCell.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		20A4EF14189D9FCB000A2974 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				20A4EF15189DA055000A2974 /* ShotCellSpec.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		20AC98F9189980B300B7A9D5 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +184,7 @@
 				20AC9914189980B400B7A9D5 /* AppDelegate.h */,
 				20AC9915189980B400B7A9D5 /* AppDelegate.m */,
 				20AC9917189980B400B7A9D5 /* Images.xcassets */,
+				20A4EF10189D9F9B000A2974 /* views */,
 				20D1B0F2189AC61100AF79FE /* controllers */,
 				20D1B0F1189AC5F800AF79FE /* storyboards */,
 				20D1B0F0189AC59300AF79FE /* services */,
@@ -185,6 +208,7 @@
 		20AC9924189980B400B7A9D5 /* DribbbleIosTests */ = {
 			isa = PBXGroup;
 			children = (
+				20A4EF14189D9FCB000A2974 /* views */,
 				20E14166189B30AC00B85D6E /* utils */,
 				20886600189B26FA00093453 /* models */,
 				208865FF189B26F200093453 /* controllers */,
@@ -430,6 +454,7 @@
 				20AC9916189980B400B7A9D5 /* AppDelegate.m in Sources */,
 				20AC9912189980B400B7A9D5 /* main.m in Sources */,
 				208865FB189B239D00093453 /* ShotsListResponse.m in Sources */,
+				20A4EF13189D9FB7000A2974 /* ShotCell.m in Sources */,
 				20D1B0EE189ABDCD00AF79FE /* ShotsService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,6 +465,7 @@
 			files = (
 				20E14169189B30F400B85D6E /* Factory.m in Sources */,
 				20886604189B2BB500093453 /* ShotListResponseSpec.m in Sources */,
+				20A4EF16189DA055000A2974 /* ShotCellSpec.m in Sources */,
 				20886602189B271A00093453 /* ShotSpec.m in Sources */,
 				20206026189AB482000B26CA /* ShotsListViewControllerSpec.m in Sources */,
 			);
