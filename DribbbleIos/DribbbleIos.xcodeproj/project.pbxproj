@@ -304,6 +304,7 @@
 				20AC991A189980B400B7A9D5 /* Frameworks */,
 				20AC991B189980B400B7A9D5 /* Resources */,
 				300B320DC36D43BF9626B28C /* Copy Pods Resources */,
+				20E5B95D18A85DB0004A5A32 /* Run Unit Tests */,
 			);
 			buildRules = (
 			);
@@ -396,6 +397,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = XcodeCoverage/exportenv.sh;
+		};
+		20E5B95D18A85DB0004A5A32 /* Run Unit Tests */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Unit Tests";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\n# Launch application using ios-sim and set up environment to inject test bundle into application\n# Source: http://stackoverflow.com/a/12682617/504494\n\nif [ \"$RUN_APPLICATION_TESTS_WITH_IOS_SIM\" = \"YES\" ]; then\ntest_bundle_path=\"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.$WRAPPER_EXTENSION\"\nenvironment_args=\"--setenv DYLD_INSERT_LIBRARIES=/../../Library/PrivateFrameworks/IDEBundleInjection.framework/IDEBundleInjection --setenv XCInjectBundle=$test_bundle_path --setenv XCInjectBundleInto=$TEST_HOST\"\nios-sim launch $(dirname $TEST_HOST) $environment_args --args -SenTest All $test_bundle_path\necho \"Finished running tests with ios-sim\"\nelse\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\nfi";
+			showEnvVarsInLog = 0;
 		};
 		300B320DC36D43BF9626B28C /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
