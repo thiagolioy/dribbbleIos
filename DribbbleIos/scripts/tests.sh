@@ -1,4 +1,2 @@
- xcodebuild -workspace ../DribbbleIos.xcworkspace -scheme DribbbleIosTests-jenkins -configuration Debug \
-           RUN_APPLICATION_TESTS_WITH_IOS_SIM=YES \
-           ONLY_ACTIVE_ARCH=NO \
-           test
+xcodebuild -workspace ../DribbbleIos.xcworkspace -scheme DribbbleIosTests-jenkins -sdk iphonesimulator TEST_AFTER_BUILD=YES clean build test
+
